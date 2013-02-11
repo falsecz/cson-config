@@ -6,6 +6,13 @@
   "directories": {
     "test": "test"
   },
+  "repository" : {
+      "type" : "git",
+      "url" : "https://github.com/falsecz/cson-config.git"
+  },
+  "bugs" : {
+      "url" : "https://github.com/falsecz/cson-config/issues"
+  },
   "dependencies": {
     "cson": "~1.4.0"
   },
