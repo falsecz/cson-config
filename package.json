@@ -1,7 +1,7 @@
 {
   "name": "cson-config",
   "version": "0.1.0",
-  "description": "ERROR: No README.md file found!",
+  "description": "Load config.cson to process.config",
   "main": "index.coffee",
   "directories": {
     "test": "test"
