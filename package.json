@@ -1,0 +1,19 @@
+{
+  "name": "cson-config",
+  "version": "0.1.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.coffee",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "cson": "~1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "coffee test/index.coffee"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}
