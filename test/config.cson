@@ -3,3 +3,4 @@ redis: [
 	2
 ]
 mongo: "mmmm"
+port: process.env.PORT or 5000
