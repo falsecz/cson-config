@@ -1,6 +1,6 @@
 {
   "name": "cson-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Load config.cson to process.config",
   "main": "index.coffee",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "repository" : {
       "type" : "git",
-      "url" : "https://github.com/falsecz/cson-config.git"
+      "url" : "git://github.com/falsecz/cson-config.git"
   },
   "bugs" : {
       "url" : "https://github.com/falsecz/cson-config/issues"
