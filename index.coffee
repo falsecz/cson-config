@@ -11,7 +11,6 @@ exports.load = (configPath) ->
 		
 	try 
 		ef = "#{configDir}/.env"
-		console.log ef
 		items = fs.readFileSync(ef).toString().split "\n"
 		for item in items
 			s = item.split '='
