@@ -1,26 +1,21 @@
 {
   "name": "cson-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Load config.cson to process.config",
   "main": "index.coffee",
   "directories": {
     "test": "test"
   },
-  "repository" : {
-      "type" : "git",
-      "url" : "git://github.com/falsecz/cson-config.git"
+  "repository": "",
+  "bugs": {
+    "url": "https://github.com/falsecz/cson-config/issues"
   },
-  "bugs" : {
-      "url" : "https://github.com/falsecz/cson-config/issues"
-  },
-  "dependencies": {
-    "cson": "~1.4.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "coffee test/index.coffee"
   },
-  "repository": "",
   "author": "",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "coffee-script": "~1.5.0"
+  }
 }

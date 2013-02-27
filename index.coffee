@@ -1,4 +1,4 @@
-cson	= require 'cson'
+cson	= require './lib/cson'
 path	= require 'path'
 fs		= require 'fs'
 
