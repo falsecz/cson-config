@@ -36,3 +36,5 @@ exports.load = (configPath) ->
 		process.exit 1
 
 	process.config[key] = val for key, val of c
+
+	return c
