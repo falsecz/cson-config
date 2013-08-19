@@ -21,3 +21,14 @@ PORT=5566
 
 
 see test/
+
+Draft
+-----
+    csonConfig = require 'cson-config'
+    mongoq = require 'mongoq'
+
+    csonConfig.use /^mongodb:/, (url) ->
+        return mongoq url
+    csonConfig.load()
+
+All values in configuration matching `/^mongodb:/` will be replaced by instance of mongoq

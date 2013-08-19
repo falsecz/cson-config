@@ -2,6 +2,15 @@ cson	= require './lib/cson'
 path	= require 'path'
 fs		= require 'fs'
 
+stack = []
+substitutes = []
+
+exports.use = (regexp, callback) ->
+	stack.push
+		regexp: regexp
+		handle: callback
+
+
 exports.load = (configPath) ->
 	unless configPath
 		configDir = path.dirname module.parent.filename
@@ -26,9 +35,17 @@ exports.load = (configPath) ->
 			process.env[s[1]] ?= s[2]
 	catch err
 
-
-
 	c = cson.parseFileSync configPath, sandbox: global
+
+	if stack.length > 0
+		mapRecursive c, (val) ->
+			for filter in stack
+				if filter.regexp.test val
+					substitute = filter.handle val
+					unless substitute in substitutes
+						substitutes.push substitute
+					return substitute
+			return val
 
 	if c.stack?
 		console.log "Error in config file #{configPath}"
@@ -38,3 +55,15 @@ exports.load = (configPath) ->
 	process.config[key] = val for key, val of c
 
 	return c
+
+
+mapRecursive = (obj, callback) ->
+	return unless typeof obj is "object"
+	for key of obj
+		if obj[key] in substitutes
+			continue
+		if typeof obj[key] is "object"
+			mapRecursive obj[key], callback
+		else
+			val = callback obj[key]
+			obj[key] = val if val
