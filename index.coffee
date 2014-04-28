@@ -11,7 +11,7 @@ exports.use = (regexp, callback) ->
 		handle: callback
 
 
-exports.load = (configPath) ->
+exports.load = (configPath, exportToProcess = true) ->
 	unless configPath
 		configDir = path.dirname module.parent.filename
 		configPath = "#{configDir}/config.cson"
@@ -52,7 +52,7 @@ exports.load = (configPath) ->
 		console.log c
 		process.exit 1
 
-	process.config[key] = val for key, val of c
+	process.config[key] = val for key, val of c if exportToProcess
 
 	return c
 
