@@ -1,8 +1,8 @@
+assert = require 'assert'
 util = require 'util'
 require('../').load()
+assert process.config.mongo is 'mmmm', "mongo isnt mmmm"
 
-util.log util.inspect process.config
-
-c2 = require('../').load './config2.cson', false
-util.log util.inspect c2
-util.log util.inspect process.config
+localConfig = require('../').load './test/config2.cson', no
+assert localConfig.url is 'mmmm', "local url isnt mmmm"
+assert process.config.url is undefined, "global url isnt undefined"
