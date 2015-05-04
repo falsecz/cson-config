@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/falsecz/cson-config.svg?branch=master)](https://travis-ci.org/falsecz/cson-config)
+[![Dependency Status](https://david-dm.org/falsecz/cson-config.svg)](https://david-dm.org/falsecz/cson-config)
 
 Installation
 -----
