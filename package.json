@@ -20,5 +20,5 @@
   "scripts": {
     "test": "coffee test/index.coffee"
   },
-  "version": "0.1.11"
+  "version": "0.1.12"
 }
