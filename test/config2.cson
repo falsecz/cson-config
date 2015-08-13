@@ -4,3 +4,4 @@ pg: [
 ]
 url: "mmmm"
 something: process.env.PORT or 5000
+stack: true
