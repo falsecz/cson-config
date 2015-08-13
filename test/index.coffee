@@ -8,4 +8,5 @@ assert localConfig.url is 'mmmm', "local url isnt mmmm"
 assert process.config.url is undefined, "global url isnt undefined"
 
 localConfig = require('../').load './test/emptyConfig.cson', no
-assert localConfig is undefined
+assert typeof localConfig is 'object'
+assert Object.keys(localConfig).length is 0

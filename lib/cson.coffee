@@ -131,6 +131,7 @@ CSON =
 		catch err
 			try
 				result = coffee.eval(src,opts)
+				result = {} unless result?
 			catch err
 				result = err
 
