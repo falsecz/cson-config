@@ -47,7 +47,7 @@ exports.load = (configPath, exportToProcess = true) ->
 					return substitute
 			return val
 
-	if c.stack?
+	if c instanceof Error
 		console.log "Error in config file #{configPath}"
 		console.log c
 		process.exit 1
